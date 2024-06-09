@@ -23,14 +23,14 @@ WORKDIR /app
 COPY package.json .
 COPY package-lock.json .
 
-# Install dependencies using yarn
-RUN yarn install react-scripts
-
 # Expose port 3000
 EXPOSE 3000
 
 # Copy the rest of the application files
 COPY . .
+
+RUN npm install yarn
+RUN yarn install react-scripts
 
 # Command to start the application
 CMD ["npm", "run", "start"]
