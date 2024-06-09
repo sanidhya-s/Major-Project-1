@@ -12,7 +12,7 @@
 # COPY . .
 # CMD ["npm", "run", "start"]
 
-FROM node:alpine
+FROM node:20
 
 # Install yarn
 RUN npm install -g yarn
