@@ -24,7 +24,7 @@ COPY package.json .
 COPY package-lock.json .
 
 # Install dependencies using yarn
-RUN yarn install
+RUN yarn install react-scripts
 
 # Expose port 3000
 EXPOSE 3000
