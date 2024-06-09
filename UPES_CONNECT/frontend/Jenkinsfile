@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Build') {
+            steps {
+                dir('UPES_CONNECT/frontend/') {
+                    script {
+                        sh 'docker build -t frontdock .'
+                        sh 'docker run -d --name frodoc -p 700:3000 frontdock'
+                    }
+                }
+            }
+        }
+    }
+}
