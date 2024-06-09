@@ -29,8 +29,7 @@ EXPOSE 3000
 # Copy the rest of the application files
 COPY . .
 
-RUN npm install yarn
-RUN yarn install react-scripts
+RUN npm install react-scripts --legacy-peer-deps
 
 # Command to start the application
 CMD ["npm", "run", "start"]
