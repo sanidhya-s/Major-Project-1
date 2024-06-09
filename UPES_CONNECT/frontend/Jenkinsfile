@@ -7,7 +7,7 @@ pipeline {
                 dir('UPES_CONNECT/frontend/') {
                     script {
                         sh 'docker build -t frontdock .'
-                        sh 'docker run -d --name frodoc -p 3000:3000 frontdock'
+                        sh 'docker run -p 3000:3000 frontdock'
                     }
                 }
             }
