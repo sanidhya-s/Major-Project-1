@@ -15,7 +15,7 @@
 FROM node:20
 
 # Install yarn
-RUN npm install -g yarn
+RUN npm install yarn
 
 WORKDIR /app
 
