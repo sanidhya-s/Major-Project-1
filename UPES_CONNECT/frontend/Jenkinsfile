@@ -6,6 +6,9 @@ pipeline {
             steps {
                 dir('UPES_CONNECT/frontend/') {
                     script {
+                        sh 'docker stop frodoc'
+                        sh 'docker rm frodoc'
+                        sh 'docker rmi frontdock'
                         sh 'docker build -t frontdock .'
                         sh 'docker run -d --name frodoc -p 3000:3000 frontdock'
                     }
